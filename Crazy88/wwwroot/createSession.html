@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Crazy88 Session</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="crazy88-logo">
+        <img src="https://crazy88storage.blob.core.windows.net/images/Crazy88_IMG_Crazy88_logo.png"><br />
+        <input type="button" class="button" onclick="location.href='index.html';" value="Leaderboard" /><br />
+        <input type="button" class="button" onclick="location.href='createSession.html';" value="Sessions" /><br />
+        <input type="button" class="button" onclick="location.href='dashboard.html';" value="Dashboard" />
+    </div>
+
+    <div class="session-creation">
+        <div class="header">Session Creation</div>
+        <div class="create-session">
+            <form action="javascript:void(0);" method="POST" onsubmit="addItem()">
+                <p>
+                    Use the input field below to start a new Crazy88 session. To start a new session the duration must be entered,
+                    which will create an expiration date and time for said session. All newly created Crazy88 teams will use the latest added session.
+                </p>
+                <input type="number" id="duration" name="duration" min="1" placeholder="Enter Duration in Hours" />
+                <br />
+                <input type="submit" value="Create New Session" class="button" />
+            </form>
+        </div>
+    </div>
+
+    <div class="session-list">
+        <div class="header">Session List</div>
+
+        <div id="spoiler">
+            <form class="edit-form">
+                <input type="hidden" id="edit-id">
+                <input type="datetime-local" id="edit-datetime">
+                <input type="submit" value="Save" class="button">
+                <a onclick="closeInput()" aria-label="Close">&#10006;</a>
+            </form>
+            <br />
+        </div>
+
+        <table cellspacing="0">
+            <tr>
+                <th>| Session |</th>
+                <th>| Expiration Date and Time |</th>
+                <th>| Play Code |</th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tbody id="session-table"></tbody>
+        </table>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+                crossorigin="anonymous"></script>
+        <script src="session.js"></script>
+    </div>
+</body>
+</html>

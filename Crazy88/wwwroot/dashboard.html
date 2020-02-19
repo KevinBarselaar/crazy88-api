@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Crazy88 Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+<div class="crazy88-logo">
+    <img src="https://crazy88storage.blob.core.windows.net/images/Crazy88_IMG_Crazy88_logo.png"><br/>
+    <input type="button" class="button" onclick="location.href='index.html';" value="Leaderboard" /><br/>
+    <input type="button" class="button" onclick="location.href='createSession.html';" value="Sessions" /><br/>
+    <input type="button" class="button" onclick="location.href='dashboard.html';" value="Dashboard" /><br />
+    <!--<input type="button" class="button" onclick="location.href='createMinigameSettings.html';" value="Minigame Settings" />-->
+</div>
+
+<div class="stats">
+    <div class="header">Global Stats</div>
+
+    <div class="content">
+        <table>
+            <td><p>100</p> Teams</td>
+            <td><p>900</p> Play Hours</td>
+            <td><p>30</p> Sessions</td>
+            <td><p>9001</p> Completed Minigames</td>
+        </table>
+    </div>
+</div>
+
+<div class="latest-session">
+    <div class="header">Current Session</div>
+
+    <div class="content">
+        <p>Top Team</p>
+        <table>
+            <td><img src="https://crazy88storage.blob.core.windows.net/images/578_20e01c82-2d6b-44f8-bad9-6cb05930cc81.jpg" /></td>
+            <td>Cap Er Zin In</td>
+            <td>9001 Points Scored</td>
+        </table>
+    </div>
+
+    <div class="content">
+        <div class="content">
+            <div class="latest-session-left">
+                <p>Stats</p>
+                <table>
+                    <tr><td>20 Teams</td></tr>
+                    <tr><td>9001 Points</td></tr>
+                    <tr><td>25 Hours</td></tr>
+                    <tr><td>999999 Coffee</td></tr>
+                    <tr><td>1337 Selfies Taken</td></tr>
+                </table>
+            </div>
+            
+            <p>Currently Playing</p>
+            <div class="latest-session-right">
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script src="site.js"></script>
+<script>
+    var ctx = document.getElementById("myChart").getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ["Crazy Waiter", "Innovation Wizard", "Fire Drill"],
+            datasets: [{
+                backgroundColor: [
+                    "#A98F62",
+                    "#3498db",
+                    "#95a5a6"
+                ],
+                data: [12, 19, 3]
+            }]
+        },
+        options: {
+            responsive: false,
+            maintainAspectRatio: false,     
+        }
+    });
+</script>
+</body>
+</html>

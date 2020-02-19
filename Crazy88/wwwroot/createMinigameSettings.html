@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Crazy88 Minigame Settings</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="crazy88-logo">
+        <img src="https://crazy88storage.blob.core.windows.net/images/Crazy88_IMG_Crazy88_logo.png"><br/>
+        <input type="button" class="button" onclick="location.href='index.html';" value="Leaderboard" /><br/>
+        <input type="button" class="button" onclick="location.href='createSession.html';" value="Sessions" /><br/>
+        <input type="button" class="button" onclick="location.href='dashboard.html';" value="Dashboard" /><br />
+        <input type="button" class="button" onclick="location.href='createMinigameSettings.html';" value="Minigame Settings" />
+    </div>
+
+    <div class="minigame-creation">
+        <div class="header">Minigame Settings Creation</div>
+        <div class="create-minigame">
+            <form action="javascript:void(0);" method="POST" onsubmit="addItem()">
+                <p>
+                    Use the input field below to add new Minigame Settings. In order to use these Minigame Settings, a new prefab must be made in the Unity project first.
+                </p>
+                <input type="text" id="name" name="name" placeholder="Enter Minigame Name" /><br />
+                <input type="text" id="description" name="description" placeholder="Enter Minigame Description" /><br />
+                <input type="number" id="maxscore" name="maxscore" placeholder="Enter Max Score" /><br />
+                <input type="number" id="minscore" name="minscore" placeholder="Enter Min Score" /><br />
+                <input type="text" id="qrvalue" name="qrvalue" placeholder="Enter QR Value" /><br />
+                <input type="text" id="location" name="location" placeholder="Enter Minigame Location" /><br />
+                <!--Active? <input type="checkbox" id="active" name="active" placeholder="Enter Active Status" /><br />-->
+                <br />
+                <input type="submit" value="Create Minigame Settings" class="button" />
+            </form>
+        </div>
+    </div>
+
+    <div class="minigame-list">
+        <div class="header">Minigame Settings List</div>
+
+        <div id="spoiler">
+            <form class="edit-form">
+                <input type="hidden" id="edit-id">
+                <input type="datetime-local" id="edit-datetime">
+                <input type="submit" value="Save" class="button">
+                <a onclick="closeInput()" aria-label="Close">&#10006;</a>
+            </form>
+            <br/>
+        </div>
+
+        <table cellspacing="0">
+            <tr>
+                <th>| ID |</th>
+                <th>| Name |</th>
+                <th>| Description |</th>
+                <th>| Max Score |</th>
+                <th>| Min Score |</th>
+                <th>| QR Value |</th>
+                <th>| Location |</th>
+                <th>| Active |</th>
+                <!--<th></th>-->
+                <th></th>
+            </tr>
+            <tbody id="minigame-table"></tbody>
+        </table>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+                crossorigin="anonymous"></script>
+        <script src="minigame.js"></script>
+    </div>
+</body>
+</html>

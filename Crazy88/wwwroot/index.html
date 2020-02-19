@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Crazy88 Leaderboard</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="crazy88-logo">
+        <img src="https://crazy88storage.blob.core.windows.net/images/Crazy88_IMG_Crazy88_logo.png"><br />
+        <input type="button" class="button" onclick="location.href='index.html';" value="Leaderboard" /><br />
+        <input type="button" class="button" onclick="location.href='createSession.html';" value="Sessions" /><br />
+        <input type="button" class="button" onclick="location.href='dashboard.html';" value="Dashboard" /><br />
+        <!--<input type="button" class="button" onclick="location.href='createMinigameSettings.html';" value="Minigame Settings" />-->
+    </div>
+
+<div class="leaderboard-list">
+    <div class="header">
+        Leaderboard
+        <p id="counter"></p>
+    </div>
+
+    <table cellspacing="0">
+        <tr>
+            <th>| Rank |</th>
+            <th>| Team |</th>
+            <th>| Session |</th>
+            <th>| Score |</th>
+            <th>| Photo |</th>
+            <th></th>
+        </tr>
+        <tbody id="todos"></tbody>
+    </table>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script src="site.js"></script>
+</body>
+</html>

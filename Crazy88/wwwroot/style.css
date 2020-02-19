@@ -1,0 +1,379 @@
+﻿body {
+    background-color: #00609C;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: #001881;
+    color: white;
+    font-size: 1.5em;
+    padding: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.header p {
+    color: #A98F62;
+    font-size: 0.6em;
+}
+
+.leaderboard-list {
+    border: 1px solid #001881;
+    border-radius: 10px;
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+    max-width: calc(100% - 2em);
+    margin: 1em auto;
+    margin-left: 800px;
+    overflow: hidden;
+    width: 900px;
+}
+
+.leaderboard-list img {
+    max-width: 300px;
+    max-height: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 10px solid transparent;
+    -webkit-border-image: url("https://crazy88storage.blob.core.windows.net/images/Crazy88_IMG_frame_1.png") 30 round; /* Safari 3.1-5 */
+    -o-border-image: url("https://crazy88storage.blob.core.windows.net/images/Crazy88_IMG_frame_1.png") 30 round; /* Opera 11-12.1 */
+    border-image: url("https://crazy88storage.blob.core.windows.net/images/Crazy88_IMG_frame_1.png") 30 round;
+}
+
+.stats {
+    border: 1px solid #001881;
+    border-radius: 10px;
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+    max-width: calc(100% - 2em);
+    margin: 1em auto;
+    margin-left: 800px;
+    overflow: hidden;
+    width: 900px;
+}
+
+.latest-session {
+    border: 1px solid #001881;
+    border-radius: 10px;
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+    max-width: calc(100% - 2em);
+    margin: 1em auto;
+    margin-left: 800px;
+    overflow: hidden;
+    width: 900px;
+}
+
+.crazy88-logo {
+    float: left;
+    margin-left: 200px;
+    overflow: hidden;
+    text-align: center;
+    position: fixed;
+}
+
+.session-creation {
+    border: 1px solid #001881;
+    border-radius: 10px;
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+    max-width: calc(100% - 2em);
+    margin: 1em auto;
+    margin-left: 800px;
+    overflow: hidden;
+    width: 800px;
+}
+
+.minigame-creation {
+    border: 1px solid #001881;
+    border-radius: 10px;
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+    max-width: calc(100% - 2em);
+    margin: 1em auto;
+    margin-left: 800px;
+    overflow: hidden;
+    width: 900px;
+}
+
+.session-list {
+    border: 1px solid #001881;
+    border-radius: 10px;
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+    max-width: calc(100% - 2em);
+    margin: 1em auto;
+    margin-left: 800px;
+    overflow: hidden;
+    width: 800px;
+}
+
+.minigame-list {
+    border: 1px solid #001881;
+    border-radius: 10px;
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+    max-width: calc(100% - 2em);
+    margin: 1em auto;
+    margin-left: 800px;
+    overflow: hidden;
+    width: 900px;
+}
+
+.content {
+    color: #2b686e;
+    background-color: #daeff1;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.content td {
+    width: 200px;
+}
+
+.content img {
+    max-height: 200px;
+    max-width: 200px;
+    border: 10px solid transparent;
+    -webkit-border-image: url("https://crazy88storage.blob.core.windows.net/images/Crazy88_IMG_frame_1.png") 30 round; /* Safari 3.1-5 */
+    -o-border-image: url("https://crazy88storage.blob.core.windows.net/images/Crazy88_IMG_frame_1.png") 30 round; /* Opera 11-12.1 */
+    border-image: url("https://crazy88storage.blob.core.windows.net/images/Crazy88_IMG_frame_1.png") 30 round;
+}
+
+.content p {
+    font-size: 30px;
+}
+
+#myChart {
+    width: 60%;
+    margin: 15px auto;
+}
+
+.create-session {
+    color: #2b686e;
+    background-color: #daeff1;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.create-minigame {
+    color: #2b686e;
+    background-color: #daeff1;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.crazy88-logo .button {
+    width: 200px;
+    margin-bottom: 15px;
+}
+
+.latest-session-left {
+    float: left;
+}
+
+.button {
+    background-color: #A98F62;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    border: 1px solid #826E4B;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 16px;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-shadow: 0px 0px 0px #283966;
+}
+
+.button:hover {
+    background-color: #826E4B;
+}
+
+.button:active {
+    position: relative;
+    top: 1px;
+}
+
+table {
+    width: 100%;
+}
+
+table td, table th {
+    color: #2b686e;
+    padding: 10px;
+}
+
+table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+    table td:last-child {
+        font-size: 0.95em;
+        line-height: 1.4;
+        text-align: left;
+    }
+
+table th {
+    background-color: #daeff1;
+    font-weight: 300;
+}
+
+table tr:nth-child(2n) {
+    background-color: white;
+}
+
+table tr:nth-child(2n+1) {
+    background-color: #edf7f8;
+}
+
+input[type=number] {
+    width: 210px;
+    padding: 12px 20px;
+    margin: 0 0 15px 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+input[type=text] {
+    width: 210px;
+    padding: 12px 20px;
+    margin: 0 0 15px 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+input[type=datetime-local] {
+    width: 250px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+#spoiler {
+    display: none;
+}
+
+
+@media screen and (max-width: 700px) {
+    table, tr, td {
+        display: block;
+    }
+
+        td:first-child {
+            position: absolute;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            width: 100px;
+        }
+
+        td:not(:first-child) {
+            clear: both;
+            margin-left: 100px;
+            padding: 4px 20px 4px 90px;
+            position: relative;
+            text-align: left;
+        }
+
+            td:not(:first-child):before {
+                color: #91ced4;
+                content: '';
+                display: block;
+                left: 0;
+                position: absolute;
+            }
+
+        td:nth-child(2):before {
+            content: 'Session:';
+        }
+
+        td:nth-child(3):before {
+            content: 'Expiration Date and Time:';
+        }
+
+        td:nth-child(4):before {
+            content: 'Phone:';
+        }
+
+        td:nth-child(5):before {
+            content: 'Comments:';
+        }
+
+    tr {
+        padding: 10px 0;
+        position: relative;
+    }
+
+        tr:first-child {
+            display: none;
+        }
+}
+
+@media screen and (max-width: 500px) {
+    .header {
+        background-color: transparent;
+        color: white;
+        font-size: 2em;
+        font-weight: 700;
+        padding: 0;
+        text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    img {
+        border: 3px solid;
+        border-color: #daeff1;
+        height: 100px;
+        margin: 0.5rem 0;
+        width: 100px;
+    }
+
+    td:first-child {
+        background-color: #c8e7ea;
+        border-bottom: 1px solid #91ced4;
+        border-radius: 10px 10px 0 0;
+        position: relative;
+        top: 0;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        width: 100%;
+    }
+
+    td:not(:first-child) {
+        margin: 0;
+        padding: 5px 1em;
+        width: 100%;
+    }
+
+        td:not(:first-child):before {
+            font-size: .8em;
+            padding-top: 0.3em;
+            position: relative;
+        }
+
+    td:last-child {
+        padding-bottom: 1rem !important;
+    }
+
+    tr {
+        background-color: white !important;
+        border: 1px solid #6cbec6;
+        border-radius: 10px;
+        box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+        margin: 0.5rem 0;
+        padding: 0;
+    }
+
+    .todos {
+        border: none;
+        box-shadow: none;
+        overflow: visible;
+    }
+}
